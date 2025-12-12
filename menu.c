@@ -4,14 +4,7 @@
 #include "topics.h"
 #include "leaderboard.h"
 
-/* Clear screen function (cross-platform) */
-void clearScreen() {
-    #ifdef _WIN32
-        system("cls");
-    #else
-        system("clear");
-    #endif
-}
+
 
 /* Pause and wait for user input */
 void pauseScreen() {
@@ -106,4 +99,5 @@ void displayMainMenu(const char *username) {
                 pauseScreen();
         }
     }
+
 }
