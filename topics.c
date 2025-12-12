@@ -137,7 +137,6 @@ void launchTopic(int choice, const char *username) {
     
     score = startQuiz(username, topicName);
     
-    clearScreen();
     printf("========================================\n");
     printf("   QUIZ COMPLETED!\n");
     printf("========================================\n");
@@ -152,4 +151,5 @@ void launchTopic(int choice, const char *username) {
     }
     
     pauseScreen();
+
 }
