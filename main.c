@@ -14,7 +14,7 @@ int main() {
     printf("   BASIC MATH LEARNING PROGRAM\n");
     printf("========================================\n\n");
     
-    /* Authentication loop */
+    //Login: it will loop forever until the valid input
     while (!loggedIn) {
         authChoice = displayAuthMenu();
         
@@ -46,10 +46,9 @@ int main() {
                 pauseScreen();
         }
     }
-    
-    /* Main program loop after login */
+    //Display main menu which contain learning, leaderboard, logout
     displayMainMenu(username);
     
-    printf("\nThank you for using the Math Learning Program, %s!\n", username);
+    printf("\nThank you for using ModMath, %s!\n", username);
     return 0;
 }
