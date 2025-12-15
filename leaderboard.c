@@ -7,7 +7,6 @@
 
 #define SCORES_FILE "scores.csv"
 
-/* Calculate total scores for all users for a specific topic */
 int calculateTotalScores(UserScore users[], int maxUsers, const char *topic) {
     FILE *file = fopen(SCORES_FILE, "r");
     if (file == NULL) {
@@ -23,12 +22,12 @@ int calculateTotalScores(UserScore users[], int maxUsers, const char *topic) {
     while (fgets(line, sizeof(line), file)) {
         sscanf(line, "%[^,],%[^,],%d,%d", username, storedTopic, &score, &attempts);
         
-        /* Skip if topic doesn't match (unless "All" is selected) */
+        // Skip if topic doesn't match 
         if (strcmp(topic, "All") != 0 && strcmp(storedTopic, topic) != 0) {
             continue;
         }
         
-        /* Find if user already exists in array */
+        // Find if user already exists 
         int found = -1;
         for (int i = 0; i < userCount; i++) {
             if (strcmp(users[i].username, username) == 0) {
@@ -38,11 +37,10 @@ int calculateTotalScores(UserScore users[], int maxUsers, const char *topic) {
         }
         
         if (found >= 0) {
-            /* User exists, add to their score */
-            users[found].totalScore += score;
+            // User exists, add to their score           users[found].totalScore += score;
             users[found].totalAttempts += 1;
         } else {
-            /* New user, add to array */
+            // New user, add to array 
             if (userCount < maxUsers) {
                 strcpy(users[userCount].username, username);
                 users[userCount].totalScore = score;
@@ -56,12 +54,12 @@ int calculateTotalScores(UserScore users[], int maxUsers, const char *topic) {
     return userCount;
 }
 
-/* Sort users by total score (descending) - Bubble Sort */
+// Sort users by total score (Bubble Sort)
 void sortUsersByScore(UserScore users[], int count) {
     for (int i = 0; i < count - 1; i++) {
         for (int j = 0; j < count - i - 1; j++) {
             if (users[j].totalScore < users[j + 1].totalScore) {
-                /* Swap */
+                // Swap
                 UserScore temp = users[j];
                 users[j] = users[j + 1];
                 users[j + 1] = temp;
@@ -70,7 +68,6 @@ void sortUsersByScore(UserScore users[], int count) {
     }
 }
 
-/* Display the leaderboard */
 void displayLeaderboard() {
     int choice;
     const char *selectedTopic = NULL;
@@ -118,10 +115,9 @@ void displayLeaderboard() {
         return;
     }
     
-    /* Sort users by score */
     sortUsersByScore(users, userCount);
     
-    /* Display top rankings */
+    // Display top rankings
     printf("%-5s %-20s %-12s %-10s\n", "Rank", "Username", "Total Score", "Attempts");
     printf("--------------------------------------------------------\n");
     
@@ -135,6 +131,7 @@ void displayLeaderboard() {
     
     printf("\n========================================\n");
 }
+
 
 
 
