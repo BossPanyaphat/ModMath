@@ -5,7 +5,6 @@
 #include "menu.h"
 
 void displayArithmeticLesson() {
-    clearScreen();
     printf("========================================\n");
     printf("   ARITHMETIC LESSON\n");
     printf("========================================\n\n");
@@ -36,7 +35,6 @@ void displayArithmeticLesson() {
 }
 
 void displayAlgebraLesson() {
-    clearScreen();
     printf("========================================\n");
     printf("   ALGEBRA LESSON\n");
     printf("========================================\n\n");
@@ -70,7 +68,6 @@ void displayAlgebraLesson() {
 }
 
 void displayNumberTheoryLesson() {
-    clearScreen();
     printf("========================================\n");
     printf("   NUMBER THEORY LESSON\n");
     printf("========================================\n\n");
@@ -134,7 +131,6 @@ void launchTopic(int choice, const char *username) {
     
     score = startQuiz(username, topicName);
     
-    clearScreen();
     printf("========================================\n");
     printf("   QUIZ COMPLETED!\n");
     printf("========================================\n");
@@ -150,3 +146,4 @@ void launchTopic(int choice, const char *username) {
     
     pauseScreen();
 }
+
