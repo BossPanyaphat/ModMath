@@ -1,3 +1,6 @@
+// Name : Kamonsit Pungprawat
+// ID : 68070503409
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,3 +55,4 @@ int main() {
     printf("\nThank you for using ModMath, %s!\n", username);
     return 0;
 }
+
