@@ -18,7 +18,6 @@ void pauseScreen() {
 // login/register menu
 int displayAuthMenu() {
     int choice;
-    clearScreen();
     printf("========================================\n");
     printf("   AUTHENTICATION MENU\n");
     printf("========================================\n");
@@ -34,7 +33,6 @@ int displayAuthMenu() {
 
 int displayTopicMenu() {
     int choice;
-    clearScreen();
     printf("========================================\n");
     printf("   SELECT A MATH TOPIC\n");
     printf("========================================\n");
@@ -63,7 +61,6 @@ void displayMainMenu(const char *username) {
     int running = 1;
     
     while (running) {
-        clearScreen();
         printf("========================================\n");
         printf("   MAIN MENU\n");
         printf("========================================\n");
@@ -85,7 +82,6 @@ void displayMainMenu(const char *username) {
                 }
                 break;
             case 2:
-                clearScreen();
                 displayLeaderboard();
                 pauseScreen();
                 break;
@@ -100,4 +96,5 @@ void displayMainMenu(const char *username) {
         }
     }
 }
+
 
