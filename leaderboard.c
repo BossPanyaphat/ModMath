@@ -1,5 +1,5 @@
-// Name : Panyaphat Pipatsaraphan
-// ID : 68070503438
+// Name : Nattaya Seangon
+// ID : 68070503420
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -97,4 +97,5 @@ void displayLeaderboard() {
     
     printf("\n========================================\n");
 }
+
 
