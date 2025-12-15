@@ -102,7 +102,6 @@ int startQuiz(const char *username, const char *topic) {
     char userAnswer[50];
     int score = 0;
     
-    clearScreen();
     printf("========================================\n");
     printf("   %s QUIZ\n", topic);
     printf("========================================\n\n");
@@ -141,4 +140,5 @@ int startQuiz(const char *username, const char *topic) {
     
     return score;
 }
+
 
