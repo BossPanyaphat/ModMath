@@ -1,3 +1,6 @@
+// Name :Pakornyos Sirikaravin
+// ID: 68070503435
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "topics.h"
@@ -150,3 +153,4 @@ void launchTopic(int choice, const char *username) {
     
     pauseScreen();
 }
+
