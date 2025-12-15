@@ -16,11 +16,9 @@ int displayTopicMenu();
 // Display exit confirmation 
 int confirmExit();
 
-// Clear screen function (cross-platform) 
-void clearScreen();
-
 // Pause and wait for user input 
 void pauseScreen();
 
 
 #endif
+
