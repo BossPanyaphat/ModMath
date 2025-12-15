@@ -1,5 +1,5 @@
-// Name : Panyaphat Pipatsaraphan
-// ID : 68070503438
+// Name : Nattaya Seangon
+// ID : 68070503420
 
 #ifndef LEADERBOARD_H
 #define LEADERBOARD_H
@@ -24,3 +24,4 @@ void sortUsersByScore(UserScore users[], int count);
 
 
 #endif
+
