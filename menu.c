@@ -1,9 +1,11 @@
+// Name : Nicharee Surakavanichakorn
+// ID : 68070503423
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
 #include "topics.h"
 #include "leaderboard.h"
-
 
 
 // Pause and wait for user input 
@@ -98,3 +100,4 @@ void displayMainMenu(const char *username) {
         }
     }
 }
+
