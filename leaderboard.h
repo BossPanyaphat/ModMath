@@ -24,6 +24,4 @@ void sortUsersByScore(UserScore users[], int count);
 
 #endif
 
-#endif
-
 
