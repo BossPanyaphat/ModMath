@@ -1,3 +1,6 @@
+// Name : Panyaphat Pipatsaraphan
+// ID : 68070503438
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -138,3 +141,4 @@ int startQuiz(const char *username, const char *topic) {
     
     return score;
 }
+
