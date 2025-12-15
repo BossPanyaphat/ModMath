@@ -6,14 +6,14 @@
 
 
 
-/* Pause and wait for user input */
+// Pause and wait for user input 
 void pauseScreen() {
     printf("\nPress Enter to continue...");
     while (getchar() != '\n');
     getchar();
 }
 
-/* Display login/register menu */
+// login/register menu
 int displayAuthMenu() {
     int choice;
     clearScreen();
@@ -30,7 +30,6 @@ int displayAuthMenu() {
     return choice;
 }
 
-/* Display topic selection menu */
 int displayTopicMenu() {
     int choice;
     clearScreen();
@@ -48,7 +47,7 @@ int displayTopicMenu() {
     return choice;
 }
 
-/* Display exit confirmation */
+// Display exit confirmation 
 int confirmExit() {
     char choice;
     printf("\nAre you sure you want to exit? (y/n): ");
@@ -57,7 +56,6 @@ int confirmExit() {
     return (choice == 'y' || choice == 'Y');
 }
 
-/* Display the main menu and handle user choices */
 void displayMainMenu(const char *username) {
     int choice, topicChoice;
     int running = 1;
@@ -99,5 +97,4 @@ void displayMainMenu(const char *username) {
                 pauseScreen();
         }
     }
-
 }
