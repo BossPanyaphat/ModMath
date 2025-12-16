@@ -37,7 +37,8 @@ int calculateTotalScores(UserScore users[], int maxUsers, const char *topic) {
         }
         
         if (found >= 0) {
-            // User exists, add to their score           users[found].totalScore += score;
+            // User exists, add to their score           
+            users[found].totalScore += score;
             users[found].totalAttempts += 1;
         } else {
             // New user, add to array 
@@ -131,6 +132,7 @@ void displayLeaderboard() {
     
     printf("\n========================================\n");
 }
+
 
 
 
