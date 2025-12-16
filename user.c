@@ -8,6 +8,7 @@
 
 #define USER_FILE "user.csv"
 
+//check is user name that user input is already exists 
 int usernameExists(const char *username) {
     FILE *file = fopen(USER_FILE, "r");
     if (file == NULL) {
@@ -19,14 +20,14 @@ int usernameExists(const char *username) {
     
     while (fgets(line, sizeof(line), file)) {
         sscanf(line, "%[^,]", storedUsername);
-        if (strcmp(storedUsername, username) == 0) {
+        if (strcmp(storedUsername, username) == 0) { //Find the username that match
             fclose(file);
-            return 1; //username exit
+            return 1; //username exist
         }
     }
     
     fclose(file);
-    return 0; //after
+    return 0; 
 }
 
 //check is password in CSV is the same with the input one
@@ -126,4 +127,5 @@ int loginUser(char *username) {
     
     return 1;
 }
+
 
